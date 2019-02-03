@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Vos Logement</h2>
+      <div class="list-group">
+        <button
+          class="list-group-item"
+          *ngFor="let dom of dom; let i = index"
+          (click)="onViewDom(i)">
+          <h3 class="list-group-item-heading">
+            {{ dom.title }}
+            <button class="btn btn-default btn-danger" (click)="onDeleteDom(dom)">
+              <span>Supprimer</span>
+            </button>
+          </h3>
+          <img style="max-width:400px; max-height: 400px;" *ngIf="dom.photo" [src]="dom.photo">
+          <p class="list-group-item-text">{{ dom.author }}</p>
+        </button>
+      </div><br>
+      <button class="btn btn-primary" (click)="onNewDom()">Nouveau logement</button>
+    </div>
+  </div>
+</div>

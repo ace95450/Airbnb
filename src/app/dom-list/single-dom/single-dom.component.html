@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+          <img style="max-width:400px; max-height: 400px;" *ngIf="dom.photo" [src]="dom.photo">
+          <h1>{{ dom.title }}</h1>
+          <h3>{{ dom.author }}</h3>
+          <p>{{ dom.description }}</p>
+          <button class="btn btn-default btn-primary" (click)="onBack()">Retour</button>
+        </div>
+      </div>
+</div>
